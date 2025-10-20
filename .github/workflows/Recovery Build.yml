@@ -48,6 +48,7 @@ jobs:
       uses: actions/checkout@v4
       
     - name: Make Workspace Dir
+      id: setup
       run: |
         mkdir workspace
         cd workspace
@@ -58,7 +59,7 @@ jobs:
         mkdir -p $(dirname ./device/oneplus/OnePlusN200)
         cp -rT ${GITHUB_WORKSPACE}/device_tree ./device/oneplus/OnePlusN200
         ls ./device/oneplus/OnePlusN200
-      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     # Cleanup The Actions Workspace Using Custom Composite Run Actions
     - name: Cleanup
@@ -101,12 +102,12 @@ jobs:
         git config --global user.name "Nico170420"
         git config --global user.email "b170420nc@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
-      id: pwd
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Repo Sync
       run: |
         repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
-      working-directory: workspace
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Check Build Tree
       uses: haya14busa/action-cond@v1
@@ -121,7 +122,7 @@ jobs:
         ls ./device/oneplus/OnePlusN200
         bash ${GITHUB_WORKSPACE}/scripts/convert.sh device/oneplus/OnePlusN200/twrp.dependencies
         repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
-      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Set Swap Space
       uses: pierotofy/set-swap-space@master
@@ -133,7 +134,7 @@ jobs:
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && make clean && make ${{ github.event.inputs.BUILD_TARGET }} -j$(nproc --all)
-      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Upload to Release
       uses: softprops/action-gh-release@v2
