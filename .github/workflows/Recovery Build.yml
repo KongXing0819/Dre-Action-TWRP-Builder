@@ -32,12 +32,6 @@ jobs:
     permissions:
       contents: write
     steps:
-    - name: Make Workspace Dir
-      run: |
-        mkdir workspace
-        cd workspace
-        echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
-
     - name: Move device tree
       run: |
         mkdir -p $(dirname ./device/oneplus)
@@ -58,6 +52,12 @@ jobs:
     # You might want to Checkout your repo first, but not mandatory
     - name: Check Out
       uses: actions/checkout@v4
+      
+    - name: Make Workspace Dir
+      run: |
+        mkdir workspace
+        cd workspace
+        echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
 
     # Cleanup The Actions Workspace Using Custom Composite Run Actions
     - name: Cleanup
