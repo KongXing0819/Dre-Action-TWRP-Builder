@@ -115,15 +115,21 @@ jobs:
 
     - name: Sync Device Dependencies
       run: |
-        echo "检查设备树文件..."
-        ls -la ./device/oneplus/OnePlusN200/
-        if [ -f "${GITHUB_WORKSPACE}/scripts/convert.sh" ]; then
-          echo "找到 convert.sh 脚本"
-          bash ${GITHUB_WORKSPACE}/scripts/convert.sh device/oneplus/OnePlusN200/twrp.dependencies
-        else
-          echo "未找到 convert.sh 脚本，跳过依赖转换"
-        fi
+        ls ./device/oneplus/OnePlusN200
+        bash ${GITHUB_WORKSPACE}/scripts/convert.sh device/oneplus/OnePlusN200/twrp.dependencies
         repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
+
+    - name: Set Swap Space
+      uses: pierotofy/set-swap-space@master
+      with:
+        swap-size-gb: 12
+
+    - name: Building recovery
+      run: |
+        source build/envsetup.sh
+        export ALLOW_MISSING_DEPENDENCIES=true
+        lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && make clean && make ${{ github.event.inputs.BUILD_TARGET }} -j$(nproc --all)
       working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Check Build Artifacts
