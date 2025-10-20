@@ -11,10 +11,6 @@ on:
         description: 'MANIFEST_BRANCH'
         required: true
         default: 'twrp-12.1'
-      DEVICE_PATH:
-        description: 'DEVICE_PATH'
-        required: true
-        default: 'device/oneplus/OnePlusN200'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
@@ -41,7 +37,7 @@ jobs:
         echo "::group::User Environment Variables"
         echo "Manifest URL: ${{ github.event.inputs.MANIFEST_URL }}"
         echo "Manifest Branch: ${{ github.event.inputs.MANIFEST_BRANCH }}"
-        echo "Device Path: ${{ github.event.inputs.DEVICE_PATH }}"
+        echo "Device Path: device/oneplus/OnePlusN200"
         echo "Device Name: ${{ github.event.inputs.DEVICE_NAME }}"
         echo "Makefile Name: ${{ github.event.inputs.MAKEFILE_NAME }}"
         echo "Build Target: ${{ github.event.inputs.BUILD_TARGET }}"
@@ -104,8 +100,8 @@ jobs:
 
     - name: Move device tree
       run: |
-        mkdir -p $(dirname ./${{ github.event.inputs.DEVICE_PATH }})
-        mv ${GITHUB_WORKSPACE}/device_tree/* ./${{ github.event.inputs.DEVICE_PATH }}
+        mkdir -p $(dirname ./device/oneplus
+        mv ${GITHUB_WORKSPACE}/device_tree ./device/oneplus/OnePlusN200
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Check Build Tree
@@ -118,7 +114,7 @@ jobs:
 
     - name: Sync Device Dependencies
       run: |
-        bash ${GITHUB_WORKSPACE}/scripts/convert.sh ${{ github.event.inputs.DEVICE_PATH }}/twrp.dependencies
+        bash ${GITHUB_WORKSPACE}/scripts/convert.sh device/oneplus/OnePlusN200/twrp.dependencies
         repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
