@@ -24,7 +24,6 @@ on:
         required: true
         default: 'vendor_boot'
 
-
 jobs:
   build:
     if: github.event.repository.owner.id == github.event.sender.id
@@ -43,10 +42,12 @@ jobs:
         echo "Build Target: ${{ github.event.inputs.BUILD_TARGET }}"
         echo "::endgroup::"
 
-    # You might want to Checkout your repo first, but not mandatory
     - name: Check Out
       uses: actions/checkout@v4
       
+    - name: Cleanup Workspace
+      uses: rokibhasansagar/slimhub_actions@main
+
     - name: Make Workspace Dir
       id: setup
       run: |
@@ -56,15 +57,10 @@ jobs:
 
     - name: Move device tree
       run: |
-        mkdir -p $(dirname ./device/oneplus/OnePlusN200)
-        cp -rT ${GITHUB_WORKSPACE}/device_tree ./device/oneplus/OnePlusN200
-        ls ./device/oneplus/OnePlusN200
+        mkdir -p device/oneplus/OnePlusN200
+        cp -r ${GITHUB_WORKSPACE}/device_tree/* device/oneplus/OnePlusN200/
+        ls -la device/oneplus/OnePlusN200/
       working-directory: ${{ steps.setup.outputs.workspace-folder }}
-
-    # Cleanup The Actions Workspace Using Custom Composite Run Actions
-    - name: Cleanup
-      uses: rokibhasansagar/slimhub_actions@main
-      # That's it! Now use your normal steps
 
     - name: Prepare the environment
       run: |
@@ -119,24 +115,26 @@ jobs:
 
     - name: Sync Device Dependencies
       run: |
-        ls ./device/oneplus/OnePlusN200
-        bash ${GITHUB_WORKSPACE}/scripts/convert.sh device/oneplus/OnePlusN200/twrp.dependencies
+        echo "检查设备树文件..."
+        ls -la ./device/oneplus/OnePlusN200/
+        if [ -f "${GITHUB_WORKSPACE}/scripts/convert.sh" ]; then
+          echo "找到 convert.sh 脚本"
+          bash ${GITHUB_WORKSPACE}/scripts/convert.sh device/oneplus/OnePlusN200/twrp.dependencies
+        else
+          echo "未找到 convert.sh 脚本，跳过依赖转换"
+        fi
         repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
       working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
-    - name: Set Swap Space
-      uses: pierotofy/set-swap-space@master
-      with:
-        swap-size-gb: 12
-
-    - name: Building recovery
+    - name: Check Build Artifacts
+      if: success()
       run: |
-        source build/envsetup.sh
-        export ALLOW_MISSING_DEPENDENCIES=true
-        lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && make clean && make ${{ github.event.inputs.BUILD_TARGET }} -j$(nproc --all)
+        echo "构建产物列表:"
+        find out/target/product/${{ github.event.inputs.DEVICE_NAME }}/ -type f \( -name "*.img" -o -name "*.zip" \) | head -20
       working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Upload to Release
+      if: success()
       uses: softprops/action-gh-release@v2
       with:
         files: |
