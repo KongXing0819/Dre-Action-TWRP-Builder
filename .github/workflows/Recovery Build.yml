@@ -33,6 +33,7 @@ jobs:
       contents: write
     steps:
     - name: Make Workspace Dir
+      run: |
         mkdir workspace
         cd workspace
         echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
