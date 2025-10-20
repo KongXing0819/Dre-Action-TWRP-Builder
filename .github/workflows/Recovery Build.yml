@@ -44,6 +44,8 @@ jobs:
 
     - name: Check Out
       uses: actions/checkout@v4
+      with:
+        submodules: true
       
     - name: Cleanup Workspace
       uses: rokibhasansagar/slimhub_actions@main
