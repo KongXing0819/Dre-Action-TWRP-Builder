@@ -57,6 +57,7 @@ jobs:
       run: |
         mkdir -p $(dirname ./device/oneplus/OnePlusN200)
         mv -T ${GITHUB_WORKSPACE}/device_tree ./device/oneplus/OnePlusN200
+        ls ./device/oneplus/OnePlusN200
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     # Cleanup The Actions Workspace Using Custom Composite Run Actions
@@ -117,6 +118,7 @@ jobs:
 
     - name: Sync Device Dependencies
       run: |
+        ls ./device/oneplus/OnePlusN200
         bash ${GITHUB_WORKSPACE}/scripts/convert.sh device/oneplus/OnePlusN200/twrp.dependencies
         repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
