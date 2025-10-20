@@ -32,12 +32,6 @@ jobs:
     permissions:
       contents: write
     steps:
-    - name: Move device tree
-      run: |
-        mkdir -p $(dirname ./device/oneplus)
-        mv ${GITHUB_WORKSPACE}/device_tree ./device/oneplus/OnePlusN200
-      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
-
     - name: Display Run Parameters
       run: |
         echo "::group::User Environment Variables"
@@ -58,6 +52,12 @@ jobs:
         mkdir workspace
         cd workspace
         echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
+
+    - name: Move device tree
+      run: |
+        mkdir -p $(dirname ./device/oneplus)
+        mv ${GITHUB_WORKSPACE}/device_tree ./device/oneplus/OnePlusN200
+      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     # Cleanup The Actions Workspace Using Custom Composite Run Actions
     - name: Cleanup
