@@ -56,7 +56,7 @@ jobs:
     - name: Move device tree
       run: |
         mkdir -p $(dirname ./device/oneplus/OnePlusN200)
-        mv -T ${GITHUB_WORKSPACE}/device_tree ./device/oneplus/OnePlusN200
+        cp -rT ${GITHUB_WORKSPACE}/device_tree ./device/oneplus/OnePlusN200
         ls ./device/oneplus/OnePlusN200
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
