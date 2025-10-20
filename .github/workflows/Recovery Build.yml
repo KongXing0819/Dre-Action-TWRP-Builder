@@ -102,9 +102,10 @@ jobs:
         repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
       working-directory: workspace
 
-    - name: Copy device tree
+    - name: Move device tree
       run: |
-        cp -r ${GITHUB_WORKSPACE}/device_tree ./${{ github.event.inputs.DEVICE_PATH }}
+        mkdir -p $(dirname ./${{ github.event.inputs.DEVICE_PATH }})
+        mv ${GITHUB_WORKSPACE}/device_tree ./${{ github.event.inputs.DEVICE_PATH }}
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Check Build Tree
