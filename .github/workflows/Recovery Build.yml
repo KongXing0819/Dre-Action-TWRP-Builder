@@ -32,6 +32,17 @@ jobs:
     permissions:
       contents: write
     steps:
+    - name: Make Workspace Dir
+        mkdir workspace
+        cd workspace
+        echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
+
+    - name: Move device tree
+      run: |
+        mkdir -p $(dirname ./device/oneplus)
+        mv ${GITHUB_WORKSPACE}/device_tree ./device/oneplus/OnePlusN200
+      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
+
     - name: Display Run Parameters
       run: |
         echo "::group::User Environment Variables"
@@ -85,9 +96,6 @@ jobs:
 
     - name: Initialize repo
       run: |
-        mkdir workspace
-        cd workspace
-        echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
         git config --global user.name "Nico170420"
         git config --global user.email "b170420nc@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
@@ -97,12 +105,6 @@ jobs:
       run: |
         repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
       working-directory: workspace
-
-    - name: Move device tree
-      run: |
-        mkdir -p $(dirname ./device/oneplus)
-        mv ${GITHUB_WORKSPACE}/device_tree ./device/oneplus/OnePlusN200
-      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Check Build Tree
       uses: haya14busa/action-cond@v1
