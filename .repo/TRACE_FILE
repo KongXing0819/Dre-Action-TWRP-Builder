@@ -1,0 +1,232 @@
+PID: 24300 START: 1761150812494236160 :+++++++++++++++NEW COMMAND+++++++++++++++++++ starting new command: init, --depth=1, -u, https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp, -b, twrp-12.1 [sid=repo-20251022T163325Z-P00005eec/repo-20251022T163332Z-P00005eec]
+
+PID: 24300 START: 1761150812511384576 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'init'] with debug: : export GIT_DIR=/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+: git init 1>| 2>|
+
+PID: 24300 END: 1761150812515840256 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'init'] with debug: : export GIT_DIR=/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+: git init 1>| 2>|
+
+PID: 24300 START: 1761150812516813312 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--null', '--list'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --null --list 1>| 2>|
+
+PID: 24300 END: 1761150812519427584 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--null', '--list'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --null --list 1>| 2>|
+
+PID: 24300 START: 1761150812519842816 :: parsing /root/.gitconfig
+
+PID: 24300 END: 1761150812522525184 :: parsing /root/.gitconfig
+
+PID: 24300 START: 1761150812522828032 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'filter.lfs.smudge', 'git-lfs smudge --skip -- %f'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all filter.lfs.smudge git-lfs smudge --skip -- %f 1>| 2>|
+
+PID: 24300 END: 1761150812525524992 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'filter.lfs.smudge', 'git-lfs smudge --skip -- %f'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all filter.lfs.smudge git-lfs smudge --skip -- %f 1>| 2>|
+
+PID: 24300 START: 1761150812525764608 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'filter.lfs.process', 'git-lfs filter-process --skip'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all filter.lfs.process git-lfs filter-process --skip 1>| 2>|
+
+PID: 24300 END: 1761150812528128000 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'filter.lfs.process', 'git-lfs filter-process --skip'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all filter.lfs.process git-lfs filter-process --skip 1>| 2>|
+
+PID: 24300 START: 1761150812528366592 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--unset-all', 'core.bare'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --unset-all core.bare 1>| 2>|
+
+PID: 24300 END: 1761150812530761728 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--unset-all', 'core.bare'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --unset-all core.bare 1>| 2>|
+
+PID: 24300 START: 1761150812531009536 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'repo.depth', '1'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all repo.depth 1 1>| 2>|
+
+PID: 24300 END: 1761150812533700352 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'repo.depth', '1'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all repo.depth 1 1>| 2>|
+
+PID: 24300 START: 1761150812533977600 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'remote.origin.url', 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all remote.origin.url https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp 1>| 2>|
+
+PID: 24300 END: 1761150812536434688 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'remote.origin.url', 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all remote.origin.url https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp 1>| 2>|
+
+PID: 24300 START: 1761150812536668416 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'remote.origin.fetch', '+refs/heads/*:refs/remotes/origin/*'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/* 1>| 2>|
+
+PID: 24300 END: 1761150812538959872 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'remote.origin.fetch', '+refs/heads/*:refs/remotes/origin/*'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/* 1>| 2>|
+
+PID: 24300 START: 1761150812539380736 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'manifest.platform', 'auto'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all manifest.platform auto 1>| 2>|
+
+PID: 24300 END: 1761150812541767424 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'manifest.platform', 'auto'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all manifest.platform auto 1>| 2>|
+
+PID: 24300 START: 1761150812542084864 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'core.repositoryFormatVersion', '1'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all core.repositoryFormatVersion 1 1>| 2>|
+
+PID: 24300 END: 1761150812544311040 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'core.repositoryFormatVersion', '1'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all core.repositoryFormatVersion 1 1>| 2>|
+
+PID: 24300 START: 1761150812544516352 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'extensions.preciousObjects', 'true'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all extensions.preciousObjects true 1>| 2>|
+
+PID: 24300 END: 1761150812546872320 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--replace-all', 'extensions.preciousObjects', 'true'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --replace-all extensions.preciousObjects true 1>| 2>|
+
+PID: 24300 START: 1761150812547371008 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'fetch', '--depth=1', '--quiet', 'origin', '--recurse-submodules=no', '--no-tags', '+refs/heads/twrp-12.1:refs/remotes/origin/twrp-12.1'] with debug: : export GIT_OBJECT_DIRECTORY=/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/objects
+: git fetch --depth=1 --quiet origin --recurse-submodules=no --no-tags +refs/heads/twrp-12.1:refs/remotes/origin/twrp-12.1 1>| 2>&1
+
+PID: 24300 END: 1761150815102789888 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'fetch', '--depth=1', '--quiet', 'origin', '--recurse-submodules=no', '--no-tags', '+refs/heads/twrp-12.1:refs/remotes/origin/twrp-12.1'] with debug: : export GIT_OBJECT_DIRECTORY=/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/objects
+: git fetch --depth=1 --quiet origin --recurse-submodules=no --no-tags +refs/heads/twrp-12.1:refs/remotes/origin/twrp-12.1 1>| 2>&1
+
+PID: 24300 START: 1761150815103318528 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'pack-refs', '--all', '--prune'] with debug: : git pack-refs --all --prune 1>| 2>|
+
+PID: 24300 END: 1761150815106667008 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'pack-refs', '--all', '--prune'] with debug: : git pack-refs --all --prune 1>| 2>|
+
+PID: 24300 START: 1761150815107481600 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--verify', 'refs/remotes/origin/twrp-12.1^0'] with debug: : git rev-parse --verify refs/remotes/origin/twrp-12.1^0 1>| 2>|
+
+PID: 24300 END: 1761150815110171136 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--verify', 'refs/remotes/origin/twrp-12.1^0'] with debug: : git rev-parse --verify refs/remotes/origin/twrp-12.1^0 1>| 2>|
+
+PID: 24300 START: 1761150815110399488 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'update-ref', '--no-deref', 'HEAD', '6dc117d9cbd08430daa16db2013560e1c4017fa8'] with debug: 
+: cd /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests
+: git update-ref --no-deref HEAD 6dc117d9cbd08430daa16db2013560e1c4017fa8 1>| 2>|
+
+PID: 24300 END: 1761150815113549824 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'update-ref', '--no-deref', 'HEAD', '6dc117d9cbd08430daa16db2013560e1c4017fa8'] with debug: 
+: cd /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests
+: git update-ref --no-deref HEAD 6dc117d9cbd08430daa16db2013560e1c4017fa8 1>| 2>|
+
+PID: 24300 START: 1761150815113761536 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'read-tree', '--reset', '-u', '-v', 'HEAD'] with debug: : git read-tree --reset -u -v HEAD 2>|
+
+PID: 24300 END: 1761150815118777344 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'read-tree', '--reset', '-u', '-v', 'HEAD'] with debug: : git read-tree --reset -u -v HEAD 2>|
+
+PID: 24300 START: 1761150815118980608 :: load refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 24300 END: 1761150815119405568 :: load refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 24300 START: 1761150815119637760 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 24300 END: 1761150815122106368 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 24300 START: 1761150815122320384 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 24300 END: 1761150815124463104 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 24300 START: 1761150815124799488 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'checkout', '-q', '6dc117d9cbd08430daa16db2013560e1c4017fa8', '--'] with debug: : git checkout -q 6dc117d9cbd08430daa16db2013560e1c4017fa8 -- 2>|
+
+PID: 24300 END: 1761150815129921792 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'checkout', '-q', '6dc117d9cbd08430daa16db2013560e1c4017fa8', '--'] with debug: : git checkout -q 6dc117d9cbd08430daa16db2013560e1c4017fa8 -- 2>|
+
+PID: 24300 START: 1761150815130163968 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'update-ref', '-d', 'refs/heads/default'] with debug: : git update-ref -d refs/heads/default 1>| 2>|
+
+PID: 24300 END: 1761150815132478208 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'update-ref', '-d', 'refs/heads/default'] with debug: : git update-ref -d refs/heads/default 1>| 2>|
+
+PID: 24300 START: 1761150815132824064 :: scan refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 24300 END: 1761150815133122048 :: scan refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 24300 START: 1761150815133303808 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 24300 END: 1761150815135414272 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 24300 START: 1761150815135600128 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 24300 END: 1761150815137801472 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 24300 START: 1761150815138083840 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 24300 END: 1761150815140175616 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 24300 START: 1761150815140353792 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 24300 END: 1761150815142571008 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 24300 START: 1761150815142648064 :: scan refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 24300 END: 1761150815142734592 :: scan refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 24300 START: 1761150815142928640 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'update-ref', 'refs/heads/default', '6dc117d9cbd08430daa16db2013560e1c4017fa8'] with debug: : git update-ref refs/heads/default 6dc117d9cbd08430daa16db2013560e1c4017fa8 1>| 2>|
+
+PID: 24300 END: 1761150815145684224 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'update-ref', 'refs/heads/default', '6dc117d9cbd08430daa16db2013560e1c4017fa8'] with debug: : git update-ref refs/heads/default 6dc117d9cbd08430daa16db2013560e1c4017fa8 1>| 2>|
+
+PID: 24300 START: 1761150815145874432 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'symbolic-ref', 'HEAD', 'refs/heads/default'] with debug: : git symbolic-ref HEAD refs/heads/default 1>| 2>|
+
+PID: 24300 END: 1761150815148175360 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'symbolic-ref', 'HEAD', 'refs/heads/default'] with debug: : git symbolic-ref HEAD refs/heads/default 1>| 2>|
+
+PID: 24300 START: 1761150815148528640 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 24300 END: 1761150815150732544 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 24300 START: 1761150815333609216 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--get', 'trace2.eventtarget'] with debug: : git config --get trace2.eventtarget 1>| 2>|
+
+PID: 24300 END: 1761150815336567296 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--get', 'trace2.eventtarget'] with debug: : git config --get trace2.eventtarget 1>| 2>|
+
+PID: 24300 END: 1761150815336684032 :+++++++++++++++NEW COMMAND+++++++++++++++++++ starting new command: init, --depth=1, -u, https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp, -b, twrp-12.1 [sid=repo-20251022T163325Z-P00005eec/repo-20251022T163332Z-P00005eec]
+
+PID: 26472 START: 1761151040998776064 :+++++++++++++++NEW COMMAND+++++++++++++++++++ starting new command: init, --depth=1, -u, https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp, -b, twrp-12.1 [sid=repo-20251022T163720Z-P00006768/repo-20251022T163720Z-P00006768]
+
+PID: 26472 START: 1761151041002089728 :git command None ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--null', '--list'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --null --list 1>| 2>|
+
+PID: 26472 END: 1761151041004721152 :git command None ['git', 'config', '--file', '/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config', '--includes', '--null', '--list'] with debug: : git config --file /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/config --includes --null --list 1>| 2>|
+
+PID: 26472 START: 1761151041005246464 :: parsing /root/.gitconfig
+
+PID: 26472 END: 1761151041005418752 :: parsing /root/.gitconfig
+
+PID: 26472 START: 1761151041015486208 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'fetch', '--depth=1', '--quiet', 'origin', '--recurse-submodules=no', '--no-tags', '+refs/heads/twrp-12.1:refs/remotes/origin/twrp-12.1'] with debug: : export GIT_DIR=/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+: export GIT_OBJECT_DIRECTORY=/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/objects
+: git fetch --depth=1 --quiet origin --recurse-submodules=no --no-tags +refs/heads/twrp-12.1:refs/remotes/origin/twrp-12.1 1>| 2>&1
+
+PID: 26472 END: 1761151042525944832 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'fetch', '--depth=1', '--quiet', 'origin', '--recurse-submodules=no', '--no-tags', '+refs/heads/twrp-12.1:refs/remotes/origin/twrp-12.1'] with debug: : export GIT_DIR=/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+: export GIT_OBJECT_DIRECTORY=/root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git/objects
+: git fetch --depth=1 --quiet origin --recurse-submodules=no --no-tags +refs/heads/twrp-12.1:refs/remotes/origin/twrp-12.1 1>| 2>&1
+
+PID: 26472 START: 1761151042526685696 :: load refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 26472 END: 1761151042527236864 :: load refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 26472 START: 1761151042527593216 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: 
+: cd /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests
+: git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 26472 END: 1761151042530481152 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: 
+: cd /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests
+: git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 26472 START: 1761151042530858240 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'checkout', '-q', '6dc117d9cbd08430daa16db2013560e1c4017fa8', '--'] with debug: : git checkout -q 6dc117d9cbd08430daa16db2013560e1c4017fa8 -- 2>|
+
+PID: 26472 END: 1761151042538775296 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'checkout', '-q', '6dc117d9cbd08430daa16db2013560e1c4017fa8', '--'] with debug: : git checkout -q 6dc117d9cbd08430daa16db2013560e1c4017fa8 -- 2>|
+
+PID: 26472 START: 1761151042539051776 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'update-ref', '-d', 'refs/heads/default'] with debug: : git update-ref -d refs/heads/default 1>| 2>|
+
+PID: 26472 END: 1761151042541808896 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'update-ref', '-d', 'refs/heads/default'] with debug: : git update-ref -d refs/heads/default 1>| 2>|
+
+PID: 26472 START: 1761151042542145280 :: scan refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 26472 END: 1761151042542236928 :: scan refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 26472 START: 1761151042542276864 :: load refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 26472 END: 1761151042542633984 :: load refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 26472 START: 1761151042542827520 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 26472 END: 1761151042545288448 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 26472 START: 1761151042545497344 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 26472 END: 1761151042547753216 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 26472 START: 1761151042548074240 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 26472 END: 1761151042550460160 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 26472 START: 1761151042550660352 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 26472 END: 1761151042552994304 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 26472 START: 1761151042553202176 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 26472 END: 1761151042555384832 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 26472 START: 1761151042555576832 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 26472 END: 1761151042557992448 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', 'HEAD'] with debug: : git rev-parse HEAD 1>| 2>|
+
+PID: 26472 START: 1761151042558094592 :: scan refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 26472 END: 1761151042558216704 :: scan refs /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git
+
+PID: 26472 START: 1761151042558468864 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'update-ref', 'refs/heads/default', '6dc117d9cbd08430daa16db2013560e1c4017fa8'] with debug: : git update-ref refs/heads/default 6dc117d9cbd08430daa16db2013560e1c4017fa8 1>| 2>|
+
+PID: 26472 END: 1761151042561729536 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'update-ref', 'refs/heads/default', '6dc117d9cbd08430daa16db2013560e1c4017fa8'] with debug: : git update-ref refs/heads/default 6dc117d9cbd08430daa16db2013560e1c4017fa8 1>| 2>|
+
+PID: 26472 START: 1761151042561947136 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'symbolic-ref', 'HEAD', 'refs/heads/default'] with debug: : git symbolic-ref HEAD refs/heads/default 1>| 2>|
+
+PID: 26472 END: 1761151042564633856 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'symbolic-ref', 'HEAD', 'refs/heads/default'] with debug: : git symbolic-ref HEAD refs/heads/default 1>| 2>|
+
+PID: 26472 START: 1761151042565121024 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 26472 END: 1761151042567280896 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'rev-parse', '--symbolic-full-name', 'HEAD'] with debug: : git rev-parse --symbolic-full-name HEAD 1>| 2>|
+
+PID: 26472 START: 1761151042570653184 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--get', 'trace2.eventtarget'] with debug: : git config --get trace2.eventtarget 1>| 2>|
+
+PID: 26472 END: 1761151042573049600 :git command /root/Android/TWRP/dre/Action-TWRP-Builder/.repo/manifests.git ['git', 'config', '--get', 'trace2.eventtarget'] with debug: : git config --get trace2.eventtarget 1>| 2>|
+
+PID: 26472 END: 1761151042573227008 :+++++++++++++++NEW COMMAND+++++++++++++++++++ starting new command: init, --depth=1, -u, https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp, -b, twrp-12.1 [sid=repo-20251022T163720Z-P00006768/repo-20251022T163720Z-P00006768]
+
