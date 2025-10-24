@@ -51,8 +51,6 @@ jobs:
     - name: Make Workspace Dir
       id: setup
       run: |
-        mkdir workspace
-        cd workspace
         echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
 
     - name: Move device tree
