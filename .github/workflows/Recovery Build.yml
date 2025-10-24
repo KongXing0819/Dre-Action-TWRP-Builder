@@ -48,14 +48,19 @@ jobs:
     - name: Cleanup Workspace
       uses: rokibhasansagar/slimhub_actions@main
 
-
+    - name: Make Workspace Dir
+      id: setup
+      run: |
+        mkdir workspace
+        cd workspace
+        echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
 
     - name: Move device tree
       run: |
         mkdir -p device/oneplus/OnePlusN200
         cp -r ${GITHUB_WORKSPACE}/device_tree/* device/oneplus/OnePlusN200/
         ls -la device/oneplus/OnePlusN200/
-      working-directory: ${{ github.workspace }}
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Prepare the environment
       run: |
@@ -88,10 +93,18 @@ jobs:
         chmod a+x ~/bin/repo
         sudo ln -sf ~/bin/repo /usr/bin/repo
 
+    - name: Initialize repo
+      run: |
+        git config --global user.name "Nico170420"
+        git config --global user.email "b170420nc@gmail.com"
+        repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
+        mv default.xml .repo/manifests/default.xml
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
+
     - name: Repo Sync
       run: |
         repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
-      working-directory: ${{ github.workspace }}
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Check Build Tree
       uses: haya14busa/action-cond@v1
@@ -106,7 +119,7 @@ jobs:
         ls ./device/oneplus/OnePlusN200
         bash ${GITHUB_WORKSPACE}/scripts/convert.sh device/oneplus/OnePlusN200/twrp.dependencies
         repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
-      working-directory: ${{ github.workspace }}
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Set Swap Space
       uses: pierotofy/set-swap-space@master
@@ -118,23 +131,23 @@ jobs:
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && make clean && make ${{ github.event.inputs.BUILD_TARGET }} -j$(nproc --all)
-      working-directory: ${{ github.workspace }}
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Check Build Artifacts
       if: success()
       run: |
         echo "构建产物列表:"
         find out/target/product/${{ github.event.inputs.DEVICE_NAME }}/ -type f \( -name "*.img" -o -name "*.zip" \) | head -20
-      working-directory: ${{ github.workspace }}
+      working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Upload to Release
       if: success()
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}.img
-          out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.zip
-          out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*vendor*.img
+          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}.img
+          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.zip
+          workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*vendor*.img
         name: ${{ github.event.inputs.DEVICE_NAME }}-${{ github.run_id }}
         tag_name: ${{ github.run_id }}
         body: |
