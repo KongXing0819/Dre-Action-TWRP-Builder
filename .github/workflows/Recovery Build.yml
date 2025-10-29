@@ -96,7 +96,7 @@ jobs:
         git config --global user.name "Nico170420"
         git config --global user.email "b170420nc@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
-        mv default.xml .repo/manifests/default.xml
+        sed -i '/<default /i\  <remote  name="los" fetch="https://github.com/LineageOS" />' .repo/manifests/default.xml
       working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Repo Sync
