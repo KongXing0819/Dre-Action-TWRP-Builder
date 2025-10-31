@@ -57,7 +57,6 @@ jobs:
       run: |
         mkdir -p device/oneplus/OnePlusN200
         cp -r ${GITHUB_WORKSPACE}/device_tree/* device/oneplus/OnePlusN200/
-        ls -la device/oneplus/OnePlusN200/
       working-directory: ${{ steps.setup.outputs.workspace-folder }}
 
     - name: Prepare the environment
@@ -114,7 +113,6 @@ jobs:
 
     - name: Sync Device Dependencies
       run: |
-        ls ./device/oneplus/OnePlusN200
         bash ${GITHUB_WORKSPACE}/scripts/convert.sh device/oneplus/OnePlusN200/twrp.dependencies
         repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
       working-directory: ${{ steps.setup.outputs.workspace-folder }}
